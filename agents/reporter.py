@@ -25,10 +25,11 @@ def execute_query(db,business_question):
     client=make_connection()
     tables=db.execute("SHOW TABLES").df()["name"].tolist()
     schema_description="\n".join(
-        f"- {table} (columns: {', '.join(db.execute(f'DESCRIBE {table}').df()['column_name'].tolist())})"
+        f"- {table} (columns: {', '.join(f'{row.column_name} {row.column_type}' for row in db.execute(f'DESCRIBE {table}').df().itertuples() if not row.column_name.startswith('pk_'))})"
         for table in tables
     )
-    query=client.responses.create(input=f"""You are a SQL query generator expert who takes a question from the business and generates a valid DuckDB SQL query for the available tables below. Only use the exact table and column names listed. As output you only produce the SQL query and nothing else.
+    query=client.responses.create(input=f"""You are a SQL query generator expert who takes a question from the business and generates a valid DuckDB SQL query for the available tables below. Only use the exact table and column names listed, with their given data types. As output you only produce the SQL query and nothing else.
+    Only join tables on columns that share the same name and a compatible data type. Never join a string/VARCHAR column with a numeric/BIGINT column. Prefer the simplest query, using as few tables as possible, that answers the question.
     Available tables:
     {schema_description}
     Generate a query for {business_question}""",model="openai/gpt-oss-20b").output[1].content[0].text
