@@ -1,0 +1,10 @@
+source_col,target_col,transformation_logic
+transaction_id,transaction_id,drop_null
+customer_id,customer_id,drop_null
+product_id,product_id,drop_null
+date,date,drop_null
+store_region,store_region,fill_unknown
+quantity,quantity,fill_mean
+unit_price,unit_price,fill_mean
+total_amount,total_amount,fill_mean
+transaction_id,transaction_id,drop_duplicates

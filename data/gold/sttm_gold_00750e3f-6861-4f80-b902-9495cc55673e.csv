@@ -1,0 +1,3 @@
+source_col,target_col,transformation_logic
+store_region,region,group_by_region
+total_amount,total_sales,group_by_region

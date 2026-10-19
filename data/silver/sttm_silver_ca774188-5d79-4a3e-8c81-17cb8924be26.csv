@@ -1,0 +1,2 @@
+source_col,target_col,transformation_logic
+cost_price,cost_price,fill_mean

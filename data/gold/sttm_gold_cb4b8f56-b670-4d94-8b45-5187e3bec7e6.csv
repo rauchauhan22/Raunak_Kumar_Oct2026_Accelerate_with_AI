@@ -1,0 +1,8 @@
+source_col,target_col,transformation_logic
+pk_sales_silver_id,pk_sales_gold_id,
+transaction_id,transaction_id,
+store_region,region,group_by_region
+total_amount,total_amount,group_by_region
+product_id,product_id,group_by_product
+quantity,quantity,group_by_product
+transaction_date,transaction_date,group_by_date

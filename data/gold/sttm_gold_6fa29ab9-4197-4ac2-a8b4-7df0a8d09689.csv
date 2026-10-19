@@ -1,0 +1,5 @@
+source_col,target_col,transformation_logic
+pk_products_silver_id,product_key,group_by_product
+product_id,product_id,group_by_product
+supplier,supplier_name,group_by_product
+cost_price,avg_cost_price,group_by_product

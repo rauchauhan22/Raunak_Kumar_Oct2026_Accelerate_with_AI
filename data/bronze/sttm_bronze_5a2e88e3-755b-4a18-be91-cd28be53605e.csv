@@ -1,0 +1,6 @@
+source_col,target_col,transformation_logic
+product_id,product_id,trim
+product_name,product_name,trim
+category,category,trim
+supplier,supplier,trim
+cost_price,cost_price,remove_currency_cast_float

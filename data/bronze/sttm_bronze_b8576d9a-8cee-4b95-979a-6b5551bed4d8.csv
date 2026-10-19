@@ -1,0 +1,9 @@
+source_col,target_col,transformation_logic
+transaction_id,transaction_id,trim
+date,transaction_date,parse_date
+customer_id,customer_id,trim
+product_id,product_id,trim
+quantity,quantity,cast_integer
+unit_price,unit_price,remove_currency_cast_float
+total_amount,total_amount,remove_currency_cast_float
+store_region,store_region,trim

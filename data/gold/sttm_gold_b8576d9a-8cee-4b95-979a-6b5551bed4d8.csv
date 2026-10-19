@@ -1,0 +1,7 @@
+source_col,target_col,transformation_logic
+total_amount,region_total_amount,group_by_region
+store_region,region_group,group_by_region
+quantity,product_total_quantity,group_by_product
+product_id,product_group,group_by_product
+date,date_total_amount,group_by_date
+transaction_date,date_group,group_by_date

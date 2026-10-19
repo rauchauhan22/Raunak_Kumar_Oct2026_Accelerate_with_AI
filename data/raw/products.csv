@@ -1,0 +1,11 @@
+product_id,product_name,category,supplier,cost_price
+p001,Wireless Mouse,Electronics,TechSupply Co,25.0
+p002,Notebook A5,Stationery,PaperWorks Ltd,12.0
+p003,USB-C Cable,electronics,TechSupply Co,8.0
+p004,Desk Lamp,Home Office,BrightGoods,18.0
+p005,Sticky Notes,Stationery,,4.0
+p006,Laptop Stand,Home Office,ErgoDesk,35.0
+p007,HDMI Cable,Electronics,TechSupply Co,
+p008,ballpoint pens,stationery,PaperWorks Ltd,2.0
+p009,Webcam HD,Electronics,,45.0
+p010,Monitor Cleaner,Home Office,CleanTech,6.0
